@@ -1,0 +1,10 @@
+// cl-hash-hmac-core-stage-2132: Test Suite
+import "../hsh_2132.zk"
+
+fn test_run():
+    res := hmac_step_2132(100, 50, 20)
+    if res != ((100 ^ 50) + 20 + 27716) & 2147483647: sys_exit(1)
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-hash-hmac-core-stage-2132!")

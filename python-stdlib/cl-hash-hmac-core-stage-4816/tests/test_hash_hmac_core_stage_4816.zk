@@ -1,0 +1,10 @@
+// cl-hash-hmac-core-stage-4816: Test Suite
+import "../hsh_4816.zk"
+
+fn test_run():
+    res := hmac_step_4816(100, 50, 20)
+    if res != ((100 ^ 50) + 20 + 62608) & 2147483647: sys_exit(1)
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-hash-hmac-core-stage-4816!")

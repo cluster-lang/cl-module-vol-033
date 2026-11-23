@@ -1,0 +1,10 @@
+// cl-hash-hmac-core-stage-5177: Test Suite
+import "../hsh_5177.zk"
+
+fn test_run():
+    res := hmac_step_5177(100, 50, 20)
+    if res != ((100 ^ 50) + 20 + 67301) & 2147483647: sys_exit(1)
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-hash-hmac-core-stage-5177!")

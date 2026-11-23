@@ -1,0 +1,10 @@
+// cl-hash-hmac-core-stage-2095: Test Suite
+import "../hsh_2095.zk"
+
+fn test_run():
+    res := hmac_step_2095(100, 50, 20)
+    if res != ((100 ^ 50) + 20 + 27235) & 2147483647: sys_exit(1)
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-hash-hmac-core-stage-2095!")

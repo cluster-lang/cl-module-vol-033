@@ -1,0 +1,10 @@
+// cl-hash-hmac-core-stage-3257: Test Suite
+import "../hsh_3257.zk"
+
+fn test_run():
+    res := hmac_step_3257(100, 50, 20)
+    if res != ((100 ^ 50) + 20 + 42341) & 2147483647: sys_exit(1)
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-hash-hmac-core-stage-3257!")

@@ -1,0 +1,10 @@
+// cl-hash-hmac-core-stage-6654: Test Suite
+import "../hsh_6654.zk"
+
+fn test_run():
+    res := hmac_step_6654(100, 50, 20)
+    if res != ((100 ^ 50) + 20 + 86502) & 2147483647: sys_exit(1)
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-hash-hmac-core-stage-6654!")

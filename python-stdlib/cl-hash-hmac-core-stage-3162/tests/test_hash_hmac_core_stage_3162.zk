@@ -1,0 +1,10 @@
+// cl-hash-hmac-core-stage-3162: Test Suite
+import "../hsh_3162.zk"
+
+fn test_run():
+    res := hmac_step_3162(100, 50, 20)
+    if res != ((100 ^ 50) + 20 + 41106) & 2147483647: sys_exit(1)
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-hash-hmac-core-stage-3162!")

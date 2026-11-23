@@ -1,0 +1,10 @@
+// cl-hash-hmac-core-stage-4800: Test Suite
+import "../hsh_4800.zk"
+
+fn test_run():
+    res := hmac_step_4800(100, 50, 20)
+    if res != ((100 ^ 50) + 20 + 62400) & 2147483647: sys_exit(1)
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-hash-hmac-core-stage-4800!")

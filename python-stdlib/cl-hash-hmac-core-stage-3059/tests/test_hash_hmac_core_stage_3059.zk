@@ -1,0 +1,10 @@
+// cl-hash-hmac-core-stage-3059: Test Suite
+import "../hsh_3059.zk"
+
+fn test_run():
+    res := hmac_step_3059(100, 50, 20)
+    if res != ((100 ^ 50) + 20 + 39767) & 2147483647: sys_exit(1)
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-hash-hmac-core-stage-3059!")

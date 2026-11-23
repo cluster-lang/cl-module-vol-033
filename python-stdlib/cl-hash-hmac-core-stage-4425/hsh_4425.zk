@@ -1,0 +1,6 @@
+// cl-hash-hmac-core-stage-4425
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn hmac_step_4425(h: int, k_opad: int, block: int) -> int:
+    return ((h ^ k_opad) + block + 57525) & 2147483647

@@ -1,0 +1,10 @@
+// cl-hash-hmac-core-stage-4041: Test Suite
+import "../hsh_4041.zk"
+
+fn test_run():
+    res := hmac_step_4041(100, 50, 20)
+    if res != ((100 ^ 50) + 20 + 52533) & 2147483647: sys_exit(1)
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-hash-hmac-core-stage-4041!")

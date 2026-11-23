@@ -1,0 +1,10 @@
+// cl-hash-hmac-core-stage-5544: Test Suite
+import "../hsh_5544.zk"
+
+fn test_run():
+    res := hmac_step_5544(100, 50, 20)
+    if res != ((100 ^ 50) + 20 + 72072) & 2147483647: sys_exit(1)
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-hash-hmac-core-stage-5544!")

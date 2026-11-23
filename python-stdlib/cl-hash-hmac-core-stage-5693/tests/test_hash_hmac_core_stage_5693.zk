@@ -1,0 +1,10 @@
+// cl-hash-hmac-core-stage-5693: Test Suite
+import "../hsh_5693.zk"
+
+fn test_run():
+    res := hmac_step_5693(100, 50, 20)
+    if res != ((100 ^ 50) + 20 + 74009) & 2147483647: sys_exit(1)
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-hash-hmac-core-stage-5693!")

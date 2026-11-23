@@ -1,0 +1,10 @@
+// cl-hash-hmac-core-stage-2330: Test Suite
+import "../hsh_2330.zk"
+
+fn test_run():
+    res := hmac_step_2330(100, 50, 20)
+    if res != ((100 ^ 50) + 20 + 30290) & 2147483647: sys_exit(1)
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-hash-hmac-core-stage-2330!")

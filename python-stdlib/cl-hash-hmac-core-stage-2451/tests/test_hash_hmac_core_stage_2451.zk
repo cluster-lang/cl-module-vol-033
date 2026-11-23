@@ -1,0 +1,10 @@
+// cl-hash-hmac-core-stage-2451: Test Suite
+import "../hsh_2451.zk"
+
+fn test_run():
+    res := hmac_step_2451(100, 50, 20)
+    if res != ((100 ^ 50) + 20 + 31863) & 2147483647: sys_exit(1)
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-hash-hmac-core-stage-2451!")

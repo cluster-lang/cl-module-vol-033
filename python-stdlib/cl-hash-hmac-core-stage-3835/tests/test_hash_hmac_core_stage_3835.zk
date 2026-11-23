@@ -1,0 +1,10 @@
+// cl-hash-hmac-core-stage-3835: Test Suite
+import "../hsh_3835.zk"
+
+fn test_run():
+    res := hmac_step_3835(100, 50, 20)
+    if res != ((100 ^ 50) + 20 + 49855) & 2147483647: sys_exit(1)
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-hash-hmac-core-stage-3835!")

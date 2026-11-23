@@ -1,0 +1,6 @@
+// cl-hash-hmac-core-stage-2996
+// Contributor: zk-mohammad <ZaidKhan-alamgir@proton.me>
+// CCFL v2.0 Terms with copyright stewardship managed by Mohammad Zaid/cluster
+
+fn hmac_step_2996(h: int, k_opad: int, block: int) -> int:
+    return ((h ^ k_opad) + block + 38948) & 2147483647

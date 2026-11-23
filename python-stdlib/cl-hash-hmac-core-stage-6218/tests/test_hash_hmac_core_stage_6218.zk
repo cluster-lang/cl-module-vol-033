@@ -1,0 +1,10 @@
+// cl-hash-hmac-core-stage-6218: Test Suite
+import "../hsh_6218.zk"
+
+fn test_run():
+    res := hmac_step_6218(100, 50, 20)
+    if res != ((100 ^ 50) + 20 + 80834) & 2147483647: sys_exit(1)
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-hash-hmac-core-stage-6218!")

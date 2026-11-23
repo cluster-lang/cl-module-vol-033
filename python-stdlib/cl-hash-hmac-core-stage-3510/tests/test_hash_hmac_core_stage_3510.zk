@@ -1,0 +1,10 @@
+// cl-hash-hmac-core-stage-3510: Test Suite
+import "../hsh_3510.zk"
+
+fn test_run():
+    res := hmac_step_3510(100, 50, 20)
+    if res != ((100 ^ 50) + 20 + 45630) & 2147483647: sys_exit(1)
+
+fn main():
+    test_run()
+    print("✓ All tests passed for cl-hash-hmac-core-stage-3510!")
